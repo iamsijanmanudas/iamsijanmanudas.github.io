@@ -1,88 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>My Resume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .section {
-      margin-bottom: 20px;
-    }
-
-    .section h2 {
-      margin-top: 0;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to create a website using HTML and CSS</title>
+<link rel="stylesheet" href="css\style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1>My Resume</h1>
+<header>
+<nav>
+<ul>
+<li><a href="#intro">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="intro">
+<div class="Container">
+<img src="image/doggo.jpg" alt="display picture of doggo">
+<h2>My name is Doggo Hi</h2>
+</div> 
+</section>
 
-    <div class="section">
-      <h2>Personal Information</h2>
-      <ul>
-        <li><span class="title">Name:</span> John Doe</li>
-        <li><span class="title">Email:</span> john.doe@example.com</li>
-        <li><span class="title">Phone:</span> (123) 456-7890</li>
-        <li><span class="title">Address:</span> 123 Main St, City, State</li>
-      </ul>
-    </div>
+<section id="about">
+<div class="container">
+<h1>About Me</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique?</p>
+<ul>
+<li>Btech Qualified</li>
+<li>Software Engineer</li>
+<li>GATE AIR 01</li>
+</ul>
+</div>
+</section>
 
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <span class="title">Bachelor of Science, Computer Science</span>
-          <span class="subtitle">University Name</span>
-          <span class="date">May 20XX</span>
-        </li>
-      </ul>
-    </div>
+<section id="contact">
+<div class="container">
+<h1>Contact me</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, laudantium.</p>
+<ul>
+<li>Email ID</li>
+<li>Insta ID</li>
+<li>Facebook ID</li>
+</ul>
+</div>
+</section>
 
-    <div class="section">
-      <h2>Work Experience</h2>
-      <ul>
-        <li>
-          <span class="title">Job Title</span>
-          <span class="subtitle">Company Name</span>
-          <span class="date">Start Date - End Date</span>
-          <ul>
-            <li>Responsibility 1</li>
-            <li>Responsibility 2</li>
-            <li>Responsibility 3</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Database Management</li>
-      </ul>
-    </div>
-  </div>
+</main>
+<footer>
+<p>© Copyright 2022 Doggo Co LTd.</p>
+</footer>
 </body>
-
 </html>
