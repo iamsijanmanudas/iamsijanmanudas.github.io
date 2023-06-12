@@ -1,42 +1,244 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    }
-    
-    header{
-    height: 45px;
-    }
-    header nav ul{
-    display: flex;
-    margin-left: 80%;
-    }
-    
-    header nav ul li{
-    padding-left: 10%;
-    }
-    
-    section{
-    height: 100vh;
-    border: 1px solid grey;
+}
+
+header {
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    
-    .Container{
-    margin-top: 10%
-    }
-    
-    .Container img{
+    background-color: #333333;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #8B4513;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5d5d5;
+    position: relative;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#intro {
+    background-color: #4c4c4c;
+    background-attachment: fixed; /* Add parallax effect */
+    background-size: cover;
+    background-position: center;
+}
+
+#about {
+    background-color: #555555;
+    background-attachment: fixed; /* Add parallax effect */
+    background-size: cover;
+    background-position: center;
+}
+
+#contact {
+    background-color: #666666;
+    background-attachment: fixed; /* Add parallax effect */
+    background-size: cover;
+    background-position: center;
+}
+
+.Container {
+    margin-top: 10%;
+}
+
+.Container:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.Container h2:hover {
+    transform: scale(1.1) translateY(-10px);
+    color: #8B4513;
+}
+
+.Container ul li:hover {
+    transform: scale(1.1) translateY(-10px);
+    color: #8B4513;
+}
+
+header h1:hover,
+header h1:focus {
+    transform: scale(1.1) translateY(-10px);
+    color: #8B4513;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer p:hover,
+footer p:focus {
+    transform: scale(1.1) translateY(-10px);
+    color: #8B4513;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
     height: 300px;
-    }
-    
-    .Container h2{
+    transition: transform 0.3s ease;
+}
+
+.image-container .hover-text {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.Container h2 {
     margin-top: 3%;
-    }
-    
-    footer {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.Container ul li {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer {
     line-height: 40px;
     display: flex;
     justify-content: center;
-    }
+}
+
+body {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5d5d5;
+    text-align: center;
+    background-color: #222222;
+    overflow: hidden;
+}
+
+#intro {
+    background-color: #333333;
+}
+
+#about {
+    background-color: #444444;
+}
+
+#contact {
+    background-color: #555555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.container p {
+    font-size: 18px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.container ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.container li {
+    margin-bottom: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.container a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.container:hover h1,
+.container:hover p,
+.container:hover li,
+.container:hover a {
+    color: #8B4513;
+}
+
+.container:hover h1 {
+    transform: scale(1.1) translateY(-10px);
+}
+body:hover {
+    transform: scale(1.01);
+}
+footer {
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #8B4513;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer p:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
