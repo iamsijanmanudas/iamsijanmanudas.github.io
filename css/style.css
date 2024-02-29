@@ -1,14 +1,44 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 10px; /* Adjust the padding as needed */
+    margin: 5px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    height: 80px;
+header, #intro, #about, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333333;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background: radial-gradient(circle, DimGrey, rgba(0, 0, 0, 0.5)); /* Radial gradient from DimGrey to 50% opaque black */
+    padding: 10px; /* Removes the padding from the header */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#intro h1, #experience h1, #contact h1 {
+    color: gold;
+}
+
+
+h2 {
+    color: LightGoldenRodYellow;
+    position: relative;
+    transform: none;
+}
+
+#experience p {
+    color: wheat ; /* This changes the font color to a light grey */
+    font-size: 14px;
 }
 
 header nav ul {
@@ -17,22 +47,17 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 0 20px;
+    padding: 10px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #8B4513;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,130 +67,43 @@ section {
     overflow-x: hidden;
     overflow-y: auto;
 }
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
 
+.avatar {
+    border-radius: 50%; /* This makes the image circular */
+    width: 250px; /* Adjust as needed */
+    height: 250px; /* Adjust as needed */
+    object-fit: cover; /* This makes sure the image covers the entire area of the img element */
+    margin-right: 20px;
+}
 #intro {
-    background-color: #4c4c4c;
-    background-attachment: fixed; /* Add parallax effect */
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to right, Dimgrey, rgba(0, 0, 0, 0.5)); /* Gradient from #4c4c4c to 50% opaque black */
+    align-self: flex-start; /* Aligns the intro section to the left */
+    width: 55%; /* Adjust the width as needed */
+
 }
 
-#about {
-    background-color: #555555;
-    background-attachment: fixed; /* Add parallax effect */
-    background-size: cover;
-    background-position: center;
-}
 
 #contact {
-    background-color: #666666;
-    background-attachment: fixed; /* Add parallax effect */
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to right,Dimgrey, rgba(0, 0, 0, 0.5)); /* Gradient from #4c4c4c to 50% opaque black */
+    align-self: flex-start; /* Aligns the intro section to the left */
+    width: 50%;
 }
 
 .Container {
-    margin-top: 10%;
-}
-
-.Container:hover {
-    transform: scale(1.05) translateY(-10px);
-}
-
-.Container h2:hover {
-    transform: scale(1.1) translateY(-10px);
-    color: #8B4513;
-}
-
-.Container ul li:hover {
-    transform: scale(1.1) translateY(-10px);
-    color: #8B4513;
-}
-
-header h1:hover,
-header h1:focus {
-    transform: scale(1.1) translateY(-10px);
-    color: #8B4513;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-footer p:hover,
-footer p:focus {
-    transform: scale(1.1) translateY(-10px);
-    color: #8B4513;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.image-container {
-    position: relative;
-    display: inline-block;
-}
-
-.image-container img {
-    height: 300px;
-    transition: transform 0.3s ease;
-}
-
-.image-container .hover-text {
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.2);
-}
-
-.image-container:hover .hover-text {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.Container h2 {
-    margin-top: 3%;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.Container ul li {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-footer {
-    line-height: 40px;
-    display: flex;
-    justify-content: center;
+    margin-top: 5%;
 }
 
 body {
+    background-image: url('../image/background.png');
+    background-repeat: repeat;
     perspective: 1px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d5d5d5;
-    text-align: center;
-    background-color: #222222;
-    overflow: hidden;
-}
 
-#intro {
-    background-color: #333333;
-}
-
-#about {
-    background-color: #444444;
-}
-
-#contact {
-    background-color: #555555;
 }
 
 .container {
@@ -174,18 +112,9 @@ section {
     padding: 40px;
 }
 
-.container h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.container p {
+.container p, .container li, .container a {
     font-size: 18px;
     color: #ffffff;
-    transition: color 0.3s ease;
 }
 
 .container ul {
@@ -194,31 +123,6 @@ section {
     padding-left: 0;
 }
 
-.container li {
-    margin-bottom: 10px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.container a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.container:hover h1,
-.container:hover p,
-.container:hover li,
-.container:hover a {
-    color: #8B4513;
-}
-
-.container:hover h1 {
-    transform: scale(1.1) translateY(-10px);
-}
-body:hover {
-    transform: scale(1.01);
-}
 footer {
     line-height: 40px;
     display: flex;
@@ -228,10 +132,6 @@ footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-footer:hover {
-    background-color: #8B4513;
-    color: #ffffff;
-}
 
 footer p {
     font-size: 18px;
@@ -241,4 +141,54 @@ footer p {
 footer p:hover {
     transform: scale(1.1);
     color: #ffffff;
+}
+    #experience {
+        color: #d3d3d3;
+        background: linear-gradient(to left,Dimgrey, rgba(0, 0, 0, 0.42));
+        align-self: center;
+        width: 85%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        color: LightGoldenRodYellow;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+#experience:hover {
+    animation-play-state: paused;
+}
+
+#experience:hover * {
+    transform: scale(1.009);
+    color: #ff0; /* Change to the color you want */
+
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.slide.fade {
+    animation: slideIn 2s ease-in-out forwards;
+    z-index: 1;
+}
+
+.slide.fade:hover {
+    animation-play-state: paused;
 }
